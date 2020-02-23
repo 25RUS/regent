@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GITHUB\\regent\\Regent\\Regent.csproj": {}
+    "d:\\GITHUB\\regent\\Regent\\Regent.csproj": {}
   },
   "projects": {
-    "D:\\GITHUB\\regent\\Regent\\Regent.csproj": {
+    "d:\\GITHUB\\regent\\Regent\\Regent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GITHUB\\regent\\Regent\\Regent.csproj",
+        "projectUniqueName": "d:\\GITHUB\\regent\\Regent\\Regent.csproj",
         "projectName": "Regent",
-        "projectPath": "D:\\GITHUB\\regent\\Regent\\Regent.csproj",
+        "projectPath": "d:\\GITHUB\\regent\\Regent\\Regent.csproj",
         "packagesPath": "C:\\Users\\AdNet\\.nuget\\packages\\",
-        "outputPath": "D:\\GITHUB\\regent\\Regent\\obj\\",
+        "outputPath": "d:\\GITHUB\\regent\\Regent\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -42,6 +42,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "NetCoreSerial": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
