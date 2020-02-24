@@ -9,19 +9,18 @@ namespace Regent.RS232
 {
     public class RS232_Connection
     {
-        string  portName {get; set;}
-        SerialPort SP = new SerialPort(portName)
+        SerialPort SP = new SerialPort(Ports.portName[Ports.p])
         {
-            SP.BaudRate = 9600,
-            SP.Parity = Parity.None,
-            SP.StopBits = StopBits.One,
-            SP.DataBits = 8,
-            SP.Handshake = Handshake.None            
+            BaudRate = 9600,
+            Parity = Parity.None,
+            StopBits = StopBits.One,
+            DataBits = 8,
+            Handshake = Handshake.None            
         };
 
-        Request(string pName, string command)
-        {        
-            portName = pName;    
+        public string Request(string pName, string command, int devNumber)
+        {     
+            Ports.p = devNumber;   
             SP.Open();
             SP.WriteLine(command);
             Thread.Sleep(500);

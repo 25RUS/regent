@@ -14,6 +14,14 @@ namespace Regent
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            
+            RS232.Init pI = new RS232.Init();
+            pI.AddPorts();
+            for(int i=0;i<RS232.Ports.portName.Count();i++)
+            {
+                Console.WriteLine(RS232.Ports.portName[i]);
+            }
+            
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
