@@ -1,6 +1,0 @@
-d:\GITHUB\regent\Regent\obj\Debug\netcoreapp3.1\Regent.csprojAssemblyReference.cache
-d:\GITHUB\regent\Regent\obj\Debug\netcoreapp3.1\staticwebassets\Regent.StaticWebAssets.Manifest.cache
-d:\GITHUB\regent\Regent\obj\Debug\netcoreapp3.1\staticwebassets\Regent.StaticWebAssets.xml
-d:\GITHUB\regent\Regent\obj\Debug\netcoreapp3.1\Regent.MvcApplicationPartsAssemblyInfo.cache
-d:\GITHUB\regent\Regent\obj\Debug\netcoreapp3.1\Regent.AssemblyInfoInputs.cache
-d:\GITHUB\regent\Regent\obj\Debug\netcoreapp3.1\Regent.AssemblyInfo.cs
