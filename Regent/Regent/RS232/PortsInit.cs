@@ -14,7 +14,7 @@ namespace Regent.RS232
             }
             catch(Exception e)
             {
-                Console.WriteLine(DateTime.Now.ToString() + " " +  e.ToString());
+                Console.WriteLine($"{DateTime.Now.ToString()} {e.ToString()}");
             }
             
         }

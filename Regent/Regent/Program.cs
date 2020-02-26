@@ -8,7 +8,7 @@ namespace Regent
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Loading REGENT - house remote control system.");
 
             RS232.Init pI = new RS232.Init();
             pI.AddPorts();

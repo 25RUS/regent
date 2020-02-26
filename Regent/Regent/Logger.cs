@@ -12,19 +12,23 @@ namespace Regent
     {
         public async void RecordToLog(string logMessage, int target)
         {
-            //StorageFolder appFolder = ApplicationData.Current.LocalFolder;
+            string logFolder = "Log";
+            if(!Directory.Exists(logFolder))
+            {
+                Directory.CreateDirectory(logFolder);
+            }
             string outFile = "";
 
             switch (target)
             {
                 case 0:
                     {
-                        outFile = "smmrp.log";
+                        outFile = $"{logFolder}/smmrp.log";
                         break;
                     }
                 case 1:
                     {
-                        outFile = "error.log";
+                        outFile = $"{logFolder}/error.log";
                         break;
                     }
             }
@@ -32,10 +36,9 @@ namespace Regent
             try
             {
                 DateTime D = DateTime.Now;
-                string temp = D.ToString() + " scanner_module: " + logMessage + Environment.NewLine;
+                string temp = $"{D.ToString()} scanner_module: {logMessage}";
                 temp.Replace("\n", " ");
-                //StorageFile logFile = await appFolder.CreateFileAsync(outFile, CreationCollisionOption.OpenIfExists);
-                //await FileIO.AppendTextAsync(logFile, temp);
+                await File.AppendAllTextAsync(outFile, temp);
             }
             catch
             {
