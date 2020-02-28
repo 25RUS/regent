@@ -18,13 +18,17 @@ namespace Regent.RS232
             Handshake = Handshake.None            
         };
 
-        public string Request(string pName, string command, int devNumber)
-        {     
+        public List<string> Request(string [] command, int devNumber)
+        {
+            List<string> result = new List<string>();
             Ports.p = devNumber;   
             SP.Open();
-            SP.WriteLine(command);
-            Thread.Sleep(500);
-            string result = SP.ReadExisting();
+            for(int i=0;i<command.Count();i++)
+            {
+                SP.WriteLine(command[i]);
+                Thread.Sleep(500);
+                result.Add(SP.ReadExisting());
+            }           
             SP.Close();
             return result;
         }
