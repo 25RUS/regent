@@ -15,21 +15,45 @@ namespace Regent.RS232
             Parity = Parity.None,
             StopBits = StopBits.One,
             DataBits = 8,
-            Handshake = Handshake.None            
+            Handshake = Handshake.RequestToSend            
         };
+
+        private void AddPorts()
+        {
+            try
+            {
+                Ports.portName.AddRange(SerialPort.GetPortNames());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"{DateTime.Now.ToString()} {e.ToString()}");
+            }
+
+        }
 
         public List<string> Request(string [] command, int devNumber)
         {
+            AddPorts();
+
             List<string> result = new List<string>();
             Ports.p = devNumber;   
-            SP.Open();
-            for(int i=0;i<command.Count();i++)
+
+            try
             {
-                SP.WriteLine(command[i]);
-                Thread.Sleep(500);
-                result.Add(SP.ReadExisting());
-            }           
-            SP.Close();
+                SP.Open();
+                for (int i = 0; i < command.Count(); i++)
+                {
+                    SP.WriteLine(command[i]);
+                    Thread.Sleep(500);
+                    result.Add(SP.ReadExisting());
+                }
+                SP.Close();
+            }
+            catch(Exception e)
+            {
+                result.Add(e.ToString());
+            }
+            
             return result;
         }
     }
