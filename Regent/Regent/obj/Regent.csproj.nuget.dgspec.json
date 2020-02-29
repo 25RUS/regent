@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GITHUB\\regent\\Regent\\Regent\\Regent.csproj": {}
+    "C:\\Users\\Revchuk\\Documents\\Visual Studio 2019\\Repository\\regent\\Regent\\Regent\\Regent.csproj": {}
   },
   "projects": {
-    "D:\\GITHUB\\regent\\Regent\\Regent\\Regent.csproj": {
+    "C:\\Users\\Revchuk\\Documents\\Visual Studio 2019\\Repository\\regent\\Regent\\Regent\\Regent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GITHUB\\regent\\Regent\\Regent\\Regent.csproj",
+        "projectUniqueName": "C:\\Users\\Revchuk\\Documents\\Visual Studio 2019\\Repository\\regent\\Regent\\Regent\\Regent.csproj",
         "projectName": "Regent",
-        "projectPath": "D:\\GITHUB\\regent\\Regent\\Regent\\Regent.csproj",
-        "packagesPath": "C:\\Users\\AdNet\\.nuget\\packages\\",
-        "outputPath": "D:\\GITHUB\\regent\\Regent\\Regent\\obj\\",
+        "projectPath": "C:\\Users\\Revchuk\\Documents\\Visual Studio 2019\\Repository\\regent\\Regent\\Regent\\Regent.csproj",
+        "packagesPath": "C:\\Users\\Revchuk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Revchuk\\Documents\\Visual Studio 2019\\Repository\\regent\\Regent\\Regent\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\AdNet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Revchuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -43,6 +38,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
             "System.IO.Ports": {
               "target": "Package",
               "version": "[4.7.0, )"
