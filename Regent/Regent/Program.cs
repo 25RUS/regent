@@ -11,7 +11,7 @@ namespace Regent
             Console.WriteLine("Loading REGENT - house remote control system.");
 
             //test db:
-            TestDb();
+            //TestDb();
         }
 
         static void TestDb()

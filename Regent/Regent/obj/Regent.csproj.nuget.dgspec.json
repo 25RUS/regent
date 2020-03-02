@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Revchuk\\Documents\\Visual Studio 2019\\Repository\\regent\\Regent\\Regent\\Regent.csproj": {}
+    "D:\\GITHUB\\regent\\Regent\\Regent\\Regent.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Revchuk\\Documents\\Visual Studio 2019\\Repository\\regent\\Regent\\Regent\\Regent.csproj": {
+    "D:\\GITHUB\\regent\\Regent\\Regent\\Regent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Revchuk\\Documents\\Visual Studio 2019\\Repository\\regent\\Regent\\Regent\\Regent.csproj",
+        "projectUniqueName": "D:\\GITHUB\\regent\\Regent\\Regent\\Regent.csproj",
         "projectName": "Regent",
-        "projectPath": "C:\\Users\\Revchuk\\Documents\\Visual Studio 2019\\Repository\\regent\\Regent\\Regent\\Regent.csproj",
-        "packagesPath": "C:\\Users\\Revchuk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Revchuk\\Documents\\Visual Studio 2019\\Repository\\regent\\Regent\\Regent\\obj\\",
+        "projectPath": "D:\\GITHUB\\regent\\Regent\\Regent\\Regent.csproj",
+        "packagesPath": "C:\\Users\\AdNet\\.nuget\\packages\\",
+        "outputPath": "D:\\GITHUB\\regent\\Regent\\Regent\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Revchuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\AdNet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

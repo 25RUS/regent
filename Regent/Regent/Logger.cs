@@ -10,39 +10,51 @@ namespace Regent
 {
     class Logger
     {
-        public async void RecordToLog(string logMessage, int target)
+        public async void RecordToLog(string cathegory, string zone, string logMessage)
         {
-            string logFolder = "Log";
-            if(!Directory.Exists(logFolder))
-            {
-                Directory.CreateDirectory(logFolder);
-            }
-            string outFile = "";
-
-            switch (target)
-            {
-                case 0:
-                    {
-                        outFile = $"{logFolder}/smmrp.log";
-                        break;
-                    }
-                case 1:
-                    {
-                        outFile = $"{logFolder}/error.log";
-                        break;
-                    }
-            }
-
             try
             {
-                DateTime D = DateTime.Now;
-                string temp = $"{D.ToString()} scanner_module: {logMessage}";
-                temp.Replace("\n", " ");
-                await File.AppendAllTextAsync(outFile, temp);
+                await using (var db = new Database.RegistryContext())
+                {            
+                    db.Add(new Database.Event()
+                    {
+                        dateTime = DateTime.Now,
+                        cathegory = cathegory,
+                        location = zone,
+                        _event = logMessage,
+                        telemetry = new Database.Telemetry()
+                        {
+                            temperature = 30,
+                            humidity = 100,
+                            illumination = 200
+                        }
+                    });
+                    db.SaveChanges();
+                }
             }
             catch
             {
                 ;
+            }
+        }
+
+        public async void RecordToLog(string errorMsg)
+        {
+            await using (var db = new Database.RegistryContext())
+            {
+                try
+                {
+                    db.Add(new Database.Error()
+                    {
+                        dateTime = DateTime.Now,
+                        _error = errorMsg
+                    });
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    ;
+                }
             }
         }
     }
